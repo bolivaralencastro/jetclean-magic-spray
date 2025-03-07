@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -35,19 +36,12 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -96,6 +90,80 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "ss01", "ss03", "cv01", "cv02", "cv03";
+  }
+
+  /* Custom Styles for JetClean Landing Page */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-medium tracking-tight;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl mb-4 leading-tight;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl mb-6 leading-tight;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl mb-4;
+  }
+
+  p {
+    @apply leading-relaxed text-jetclean-darkgray;
+  }
+
+  section {
+    @apply py-16 md:py-24 overflow-hidden;
+  }
+
+  /* Custom animations */
+  .scroll-reveal {
+    @apply opacity-0 transition-all duration-700;
+  }
+
+  .scroll-reveal.revealed {
+    @apply opacity-100;
+  }
+
+  .hover-scale {
+    @apply transition-transform duration-300 hover:scale-105;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-jetclean-orange to-jetclean-black;
+  }
+  
+  .btn-primary {
+    @apply bg-jetclean-orange text-white px-8 py-4 rounded-full font-medium transition-all duration-300 hover:shadow-lg hover:bg-orange-600 inline-block;
+  }
+  
+  .btn-secondary {
+    @apply bg-transparent border-2 border-jetclean-orange text-jetclean-orange px-8 py-3.5 rounded-full font-medium transition-all duration-300 hover:bg-jetclean-orange hover:text-white inline-block;
+  }
+
+  .section-title {
+    @apply text-center max-w-3xl mx-auto mb-16;
+  }
+
+  .section-tag {
+    @apply inline-block text-sm font-medium px-4 py-1.5 bg-jetclean-lightgray rounded-full mb-4 text-jetclean-darkgray;
+  }
+
+  .blur-load {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+
+  .blur-load img {
+    opacity: 0;
+    transition: opacity 250ms ease-in-out;
+  }
+
+  .blur-load.loaded img {
+    opacity: 1;
   }
 }
