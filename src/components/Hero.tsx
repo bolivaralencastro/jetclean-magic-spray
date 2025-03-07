@@ -13,20 +13,20 @@ const Hero: React.FC = () => {
       <div className="container mx-auto px-6 py-16 md:py-24">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <div className="section-tag">Revolucionário</div>
-            <h1 className="font-bold">
+            <div className="text-sm font-semibold text-jetclean-orange bg-jetclean-orange/10 px-4 py-1.5 rounded-full inline-block">Revolucionário</div>
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
               Transforme Sua Rotina de Limpeza com 
               <span className="text-jetclean-orange"> JetClean</span>
             </h1>
-            <p className="text-xl">
+            <p className="text-lg md:text-xl text-gray-700">
               A Solução Definitiva para um Banheiro Impecável! Diga adeus ao trabalho pesado.
             </p>
             <div className="flex flex-wrap gap-4">
-              <a href="#cta" className="btn-primary flex items-center">
+              <a href="#cta" className="bg-jetclean-orange hover:bg-jetclean-orange/90 text-white px-6 py-3 rounded-lg font-medium transition-colors flex items-center">
                 Compre Agora 
                 <ArrowRight className="ml-2" size={20} />
               </a>
-              <a href="#how-it-works" className="btn-secondary">
+              <a href="#how-it-works" className="bg-white border border-jetclean-orange text-jetclean-orange hover:bg-jetclean-orange/5 px-6 py-3 rounded-lg font-medium transition-colors">
                 Como Funciona
               </a>
             </div>
@@ -47,11 +47,11 @@ const Hero: React.FC = () => {
           </div>
           
           <div className="relative">
-            <div className="rounded-3xl overflow-hidden shadow-xl">
+            <div className="rounded-3xl overflow-hidden bg-gray-100 p-8 shadow-lg">
               <img 
-                src="https://source.unsplash.com/photo-1485827404703-89b55fcc595e" 
-                alt="JetClean em ação" 
-                className="w-full h-auto rounded-3xl hover:scale-105 transition-transform duration-700"
+                src="/lovable-uploads/cb076a13-2c16-4eaa-bd87-aaac107bb7ff.png" 
+                alt="JetClean - Pulverizador de pressão para limpeza" 
+                className="w-full h-auto max-h-[450px] object-contain hover:scale-105 transition-transform duration-700"
                 loading="lazy"
               />
             </div>
