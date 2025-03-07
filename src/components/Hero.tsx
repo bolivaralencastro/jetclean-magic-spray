@@ -11,14 +11,15 @@ const Hero: React.FC = () => {
       <div className="absolute w-96 h-96 rounded-full bg-jetclean-orange/5 bottom-10 -right-20"></div>
       
       <div className="container mx-auto px-6 py-16 md:py-24">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
+        <div className="grid md:grid-cols-12 gap-8 items-center">
+          {/* Text content - reduced to 5 columns */}
+          <div className="md:col-span-5 space-y-6">
             <div className="text-sm font-semibold text-jetclean-orange bg-jetclean-orange/10 px-4 py-1.5 rounded-full inline-block">Revolucionário</div>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
               Transforme Sua Rotina de Limpeza com 
               <span className="text-jetclean-orange"> JetClean</span>
             </h1>
-            <p className="text-lg md:text-xl text-gray-700">
+            <p className="text-lg text-gray-700">
               A Solução Definitiva para um Banheiro Impecável! Diga adeus ao trabalho pesado.
             </p>
             <div className="flex flex-wrap gap-4">
@@ -46,19 +47,20 @@ const Hero: React.FC = () => {
             </div>
           </div>
           
-          <div className="relative">
-            <div className="rounded-3xl overflow-hidden flex justify-center items-center py-6">
+          {/* Product image - increased to 7 columns */}
+          <div className="md:col-span-7 relative flex justify-center">
+            <div className="relative w-full">
               <img 
                 src="/lovable-uploads/23c8f26d-427c-414f-8d83-5c452879bbdc.png" 
                 alt="JetClean - Pulverizador de pressão para limpeza" 
-                className="w-full h-auto max-h-[500px] object-contain hover:scale-105 transition-transform duration-700"
+                className="w-full h-auto object-contain max-h-[600px] hover:scale-105 transition-transform duration-700"
                 loading="lazy"
               />
-            </div>
-            
-            <div className="absolute -bottom-4 right-4 bg-white p-3 rounded-xl shadow-md">
-              <div className="text-sm font-medium text-jetclean-orange">Promoção</div>
-              <div className="text-sm font-bold">Kit Premium Grátis!</div>
+              
+              <div className="absolute -bottom-4 right-4 bg-white p-3 rounded-xl shadow-md">
+                <div className="text-sm font-medium text-jetclean-orange">Promoção</div>
+                <div className="text-sm font-bold">Kit Premium Grátis!</div>
+              </div>
             </div>
           </div>
         </div>
