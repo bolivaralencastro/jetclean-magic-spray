@@ -47,11 +47,11 @@ const Hero: React.FC = () => {
           </div>
           
           <div className="relative">
-            <div className="rounded-3xl overflow-hidden bg-gray-100 p-8 shadow-lg">
+            <div className="rounded-3xl overflow-hidden flex justify-center items-center py-6">
               <img 
-                src="/lovable-uploads/cb076a13-2c16-4eaa-bd87-aaac107bb7ff.png" 
+                src="/lovable-uploads/23c8f26d-427c-414f-8d83-5c452879bbdc.png" 
                 alt="JetClean - Pulverizador de pressão para limpeza" 
-                className="w-full h-auto max-h-[450px] object-contain hover:scale-105 transition-transform duration-700"
+                className="w-full h-auto max-h-[500px] object-contain hover:scale-105 transition-transform duration-700"
                 loading="lazy"
               />
             </div>
