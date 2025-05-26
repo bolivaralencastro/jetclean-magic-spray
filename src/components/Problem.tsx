@@ -1,30 +1,11 @@
 
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import { X } from 'lucide-react';
+import { Button } from "@/components/ui/button";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const Problem: React.FC = () => {
-  const sectionRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    const elements = sectionRef.current?.querySelectorAll('.scroll-reveal');
-    elements?.forEach((el) => observer.observe(el));
-
-    return () => {
-      elements?.forEach((el) => observer.unobserve(el));
-    };
-  }, []);
+  const sectionRef = useScrollReveal<HTMLDivElement>();
 
   return (
     <section className="bg-jetclean-white py-24">
@@ -73,9 +54,9 @@ const Problem: React.FC = () => {
           <p className="text-lg font-medium mb-6">
             Você merece uma solução que facilite sua vida e torne a limpeza uma tarefa simples e eficiente!
           </p>
-          <a href="#features" className="btn-secondary">
-            Conheça a Solução
-          </a>
+          <Button asChild variant="outline" size="lg">
+            <a href="#features">Conheça a Solução</a>
+          </Button>
         </div>
       </div>
     </section>

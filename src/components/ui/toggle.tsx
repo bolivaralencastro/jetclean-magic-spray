@@ -1,3 +1,4 @@
+// eslint-disable-next-line react-refresh/only-export-components - Exporting variants is a common pattern for UI components
 import * as React from "react"
 import * as TogglePrimitive from "@radix-ui/react-toggle"
 import { cva, type VariantProps } from "class-variance-authority"

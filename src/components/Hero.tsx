@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+import { Button } from "@/components/ui/button";
 
 const Hero: React.FC = () => {
   return (
@@ -23,13 +24,12 @@ const Hero: React.FC = () => {
               A Solução Definitiva para um Banheiro Impecável! Diga adeus ao trabalho pesado.
             </p>
             <div className="flex flex-wrap gap-4">
-              <a href="#cta" className="bg-jetclean-orange hover:bg-jetclean-orange/90 text-white px-6 py-3 rounded-lg font-medium transition-colors flex items-center">
-                Compre Agora 
-                <ArrowRight className="ml-2" size={20} />
-              </a>
-              <a href="#how-it-works" className="bg-white border border-jetclean-orange text-jetclean-orange hover:bg-jetclean-orange/5 px-6 py-3 rounded-lg font-medium transition-colors">
-                Como Funciona
-              </a>
+              <Button asChild variant="default" size="lg">
+                <a href="#cta" className="flex items-center"> Compre Agora <ArrowRight className="ml-2" size={20} /> </a>
+              </Button>
+              <Button asChild variant="outline" size="lg">
+                <a href="#how-it-works">Como Funciona</a>
+              </Button>
             </div>
             <div className="text-sm text-jetclean-darkgray/70 flex items-center gap-4">
               <span className="flex items-center">

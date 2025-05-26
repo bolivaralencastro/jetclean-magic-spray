@@ -8,20 +8,20 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-10">
           <div className="col-span-2 md:col-span-1">
-            <a href="#" className="font-bold text-2xl block mb-4">
+            <a href="/" className="font-bold text-2xl block mb-4">
               <span className="text-jetclean-orange">Jet</span>Clean
             </a>
             <p className="text-gray-400 mb-6">
               A revolução na limpeza do banheiro. Diga adeus ao esforço e olá à praticidade, higiene e eficiência.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-jetclean-orange transition-colors">
+              <a href="#placeholder-facebook" aria-label="Facebook" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-jetclean-orange transition-colors">
                 <Facebook size={18} />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-jetclean-orange transition-colors">
+              <a href="#placeholder-instagram" aria-label="Instagram" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-jetclean-orange transition-colors">
                 <Instagram size={18} />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-jetclean-orange transition-colors">
+              <a href="#placeholder-twitter" aria-label="Twitter" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-jetclean-orange transition-colors">
                 <Twitter size={18} />
               </a>
             </div>
@@ -49,16 +49,16 @@ const Footer: React.FC = () => {
             <h3 className="font-medium text-lg mb-4">Legal</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">Termos de Uso</a>
+                <a href="#terms-of-use" className="text-gray-400 hover:text-white transition-colors">Termos de Uso</a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">Política de Privacidade</a>
+                <a href="#privacy-policy" className="text-gray-400 hover:text-white transition-colors">Política de Privacidade</a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">Garantia</a>
+                <a href="#warranty" className="text-gray-400 hover:text-white transition-colors">Garantia</a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">Devolução</a>
+                <a href="#returns" className="text-gray-400 hover:text-white transition-colors">Devolução</a>
               </li>
             </ul>
           </div>

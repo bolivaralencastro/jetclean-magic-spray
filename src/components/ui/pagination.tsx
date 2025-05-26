@@ -54,6 +54,7 @@ const PaginationLink = ({
       }),
       className
     )}
+    aria-label={props['aria-label'] || (!props.children ? 'Page link' : undefined)}
     {...props}
   />
 )

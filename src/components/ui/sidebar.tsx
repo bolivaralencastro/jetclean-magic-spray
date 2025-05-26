@@ -1,3 +1,4 @@
+// eslint-disable-next-line react-refresh/only-export-components - Exports a comprehensive set of related sidebar components and a hook
 import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
 import { VariantProps, cva } from "class-variance-authority"

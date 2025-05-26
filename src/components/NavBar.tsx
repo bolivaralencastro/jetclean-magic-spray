@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { Button } from "@/components/ui/button";
 
 const NavBar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -22,7 +23,7 @@ const NavBar: React.FC = () => {
       }`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
-        <a href="#" className="font-bold text-2xl text-jetclean-black">
+        <a href="#top" className="font-bold text-2xl text-jetclean-black">
           <span className="text-jetclean-orange">Jet</span>Clean
         </a>
 
@@ -39,14 +40,16 @@ const NavBar: React.FC = () => {
           <a href="#faq" className="text-jetclean-darkgray hover:text-jetclean-orange transition-colors">
             FAQ
           </a>
-          <a href="#cta" className="btn-primary py-2 px-6">
-            Compre Agora
-          </a>
+          <Button asChild variant="default" size="default">
+            <a href="#cta">Compre Agora</a>
+          </Button>
         </div>
 
         <button 
           className="md:hidden focus:outline-none"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label={mobileMenuOpen ? "Fechar menu" : "Abrir menu"}
+          aria-expanded={mobileMenuOpen}
         >
           {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -84,13 +87,15 @@ const NavBar: React.FC = () => {
             >
               FAQ
             </a>
-            <a 
-              href="#cta" 
-              className="btn-primary inline-block text-center"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Compre Agora
-            </a>
+            <Button asChild variant="default" size="default">
+              <a 
+                href="#cta" 
+                className="inline-block text-center w-full" {/* Added w-full for similar mobile layout */}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Compre Agora
+              </a>
+            </Button>
           </div>
         </div>
       )}

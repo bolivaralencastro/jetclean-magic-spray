@@ -135,14 +135,6 @@
   .text-gradient {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-jetclean-orange to-jetclean-black;
   }
-  
-  .btn-primary {
-    @apply bg-jetclean-orange text-white px-8 py-4 rounded-full font-medium transition-all duration-300 hover:shadow-lg hover:bg-orange-600 inline-block;
-  }
-  
-  .btn-secondary {
-    @apply bg-transparent border-2 border-jetclean-orange text-jetclean-orange px-8 py-3.5 rounded-full font-medium transition-all duration-300 hover:bg-jetclean-orange hover:text-white inline-block;
-  }
 
   .section-title {
     @apply text-center max-w-3xl mx-auto mb-16;

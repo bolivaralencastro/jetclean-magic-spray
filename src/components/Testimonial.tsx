@@ -1,30 +1,10 @@
 
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import { Quote } from 'lucide-react';
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const Testimonial: React.FC = () => {
-  const sectionRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    const elements = sectionRef.current?.querySelectorAll('.scroll-reveal');
-    elements?.forEach((el) => observer.observe(el));
-
-    return () => {
-      elements?.forEach((el) => observer.unobserve(el));
-    };
-  }, []);
+  const sectionRef = useScrollReveal<HTMLDivElement>();
 
   return (
     <section className="py-20 bg-jetclean-white">
@@ -40,7 +20,7 @@ const Testimonial: React.FC = () => {
             
             <div>
               <h3 className="text-2xl font-medium mb-4">
-                "O JetClean mudou minha rotina! É rápido, eficiente e deixa tudo brilhando sem esforço. Melhor compra que já fiz!"
+                &quot;O JetClean mudou minha rotina! É rápido, eficiente e deixa tudo brilhando sem esforço. Melhor compra que já fiz!&quot;
               </h3>
               <div className="flex items-center">
                 <div className="w-12 h-12 bg-gray-200 rounded-full mr-4"></div>

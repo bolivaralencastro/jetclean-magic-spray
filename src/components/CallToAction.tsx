@@ -1,30 +1,11 @@
 
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import { ArrowRight, CheckCircle, Clock, Truck, ShieldCheck } from 'lucide-react';
+import { Button } from "@/components/ui/button";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const CallToAction: React.FC = () => {
-  const sectionRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    const elements = sectionRef.current?.querySelectorAll('.scroll-reveal');
-    elements?.forEach((el) => observer.observe(el));
-
-    return () => {
-      elements?.forEach((el) => observer.unobserve(el));
-    };
-  }, []);
+  const sectionRef = useScrollReveal<HTMLDivElement>();
 
   return (
     <section id="cta" className="py-24 bg-white relative overflow-hidden">
@@ -119,10 +100,10 @@ const CallToAction: React.FC = () => {
                   <div className="text-right text-sm">ou 10x de R$ 24,99 sem juros</div>
                 </div>
                 
-                <a href="#" className="btn-primary w-full text-center flex items-center justify-center">
+                <Button type="button" variant="default" size="lg" className="w-full flex items-center justify-center">
                   Compre Agora
                   <ArrowRight className="ml-2" size={20} />
-                </a>
+                </Button>
                 
                 <p className="text-sm text-center mt-4 text-gray-500">
                   Estoque limitado – Entrega em até 7 dias úteis

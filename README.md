@@ -59,6 +59,7 @@ This project is built with .
 - React
 - shadcn-ui
 - Tailwind CSS
+- ESLint (with React and jsx-a11y plugins for code quality and accessibility)
 
 ## How can I deploy this project?
 
