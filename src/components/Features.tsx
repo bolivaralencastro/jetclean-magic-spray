@@ -44,7 +44,7 @@ const Features: React.FC = () => {
           <div className="relative scroll-reveal animate-fade-in-left">
             <div className="relative z-10">
               <img 
-                src="/lovable-uploads/23c8f26d-427c-414f-8d83-5c452879bbdc.png" 
+                src="/jetclean-magic-spray/lovable-uploads/23c8f26d-427c-414f-8d83-5c452879bbdc.png" 
                 alt="JetClean - Pulverizador de Pressão" 
                 className="rounded-3xl shadow-xl mx-auto"
               />

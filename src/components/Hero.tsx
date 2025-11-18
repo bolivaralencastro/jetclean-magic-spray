@@ -51,7 +51,7 @@ const Hero: React.FC = () => {
           <div className="md:col-span-7 relative flex justify-center">
             <div className="relative w-full">
               <img 
-                src="/lovable-uploads/23c8f26d-427c-414f-8d83-5c452879bbdc.png" 
+                src="/jetclean-magic-spray/lovable-uploads/23c8f26d-427c-414f-8d83-5c452879bbdc.png" 
                 alt="JetClean - Pulverizador de pressão para limpeza" 
                 className="w-full h-auto object-contain max-h-[600px] hover:scale-105 transition-transform duration-700"
                 loading="lazy"
