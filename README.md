@@ -62,7 +62,19 @@ This project is built with .
 
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/089925ea-3cee-40f1-8f5d-c08dc7d9c300) and click on Share -> Publish.
+### Deploy to GitHub Pages
+
+Este projeto está configurado para deploy automático no GitHub Pages. Para ativar:
+
+1. Vá até as configurações do repositório no GitHub
+2. Navegue até **Settings** > **Pages**
+3. Em **Source**, selecione **GitHub Actions**
+4. Faça push das alterações para a branch `main`
+5. O deploy será feito automaticamente em: https://bolivaralencastro.github.io/jetclean-magic-spray/
+
+### Deploy via Lovable
+
+Você também pode abrir [Lovable](https://lovable.dev/projects/089925ea-3cee-40f1-8f5d-c08dc7d9c300) e clicar em Share -> Publish.
 
 ## I want to use a custom domain - is that possible?
 
